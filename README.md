@@ -1,1 +1,59 @@
-# Felipe-
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¿Quieres ser mi San Valentín?</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #ffecf2;
+            color: #d63384;
+        }
+        h1 {
+            margin-top: 50px;
+        }
+        .buttons {
+            margin-top: 20px;
+            position: relative;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes {
+            background-color: #ff69b4;
+            color: white;
+        }
+        .no {
+            background-color: #ddd;
+            color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>¿Quieres ser mi San Valentín? 💖</h1>
+    <div class="buttons">
+        <button class="yes" onclick="alert('¡Sabía que dirías sí! 💕')">Sí</button>
+        <button class="no" onmouseover="moverBoton()" onclick="moverBoton()">No</button>
+    </div>
+
+    <script>
+        function moverBoton() {
+            let botonNo = document.querySelector(".no");
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 50);
+            botonNo.style.left = `${x}px`;
+            botonNo.style.top = `${y}px`;
+        }
+    </script>
+
+</body>
+</html>
